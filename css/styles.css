@@ -78,7 +78,25 @@ button {
     position: absolute;
     border-radius: 10px;
 }
-
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+#download {
+    padding: 1.2rem 3.5rem 1.2rem 2rem;
+    background-image: url("../images/icons8-download-64.png");
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: right 17% bottom 45%;
+}
+#share {
+    padding: 1.2rem 3.5rem 1.2rem 2rem;
+    background-image: url("../images/icons8-chain-48.png");
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    background-position: right 17% bottom 45%;
+}
 
 
 @media screen and (max-width: 730px) {
