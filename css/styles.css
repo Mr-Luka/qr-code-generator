@@ -53,6 +53,10 @@ button {
     background-color: #4061db;
 }
 
+.hide {
+    display: none;
+}
+
 
 
 @media screen and (max-width: 730px) {

@@ -8,12 +8,24 @@
 
 </head>
 <body>
-    <div class="container">
-        <img src="./images/logo-qr-generator.svg" alt="qr logo"/>
+    <div class="container hide">
+        <img id="first-logo" src="./images/logo-qr-generator.svg" alt="qr logo"/>
         <form>
             <input type="text" id="input-text" placeholder="Enter an url"/>
             <button class="qr-code-button" type="submit">QR code</button>
         </form>
+    </div>
+
+    <div class="second-page">
+        <img id="second-logo" src="./images/logo-qr-generator.svg" alt="qr logo"/>
+    </div>
+    <div class="container2">
+        <div id="qr-code-container">
+            <div class="qr">
+            </div>
+        </div>
+        <button id="download">Download</button>
+        <button id="share">Share</button>
     </div>
 
     <script src="./js/script.js"></script>
