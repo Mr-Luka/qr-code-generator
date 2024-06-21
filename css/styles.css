@@ -57,6 +57,28 @@ button {
     display: none;
 }
 
+.image-container {
+    position: absolute;
+    top: 4rem;
+    left: -6rem;
+}
+#qr-code-container {
+    background-color: #212c4e;
+    padding: 5rem 10rem 15rem 10rem;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qr {
+    background-color: white;
+    border: 1px solid red;
+    padding: 8rem 8rem 8rem 8rem;
+    margin-top: 10rem;
+    position: absolute;
+    border-radius: 10px;
+}
+
 
 
 @media screen and (max-width: 730px) {
