@@ -58,6 +58,10 @@ button {
 @media screen and (max-width: 730px) {
     .container {
         text-align: center;
+        margin-right: 5rem;
+    }
+    img {
+        margin: 0 0 2rem 4rem;
     }
     form {
         margin: 0rem 2rem 0rem 2rem;
