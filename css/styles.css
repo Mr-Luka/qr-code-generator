@@ -31,10 +31,9 @@ img {
 
 input {
     padding: 1.5rem 20rem 1.5rem 1rem;
-    color: white;
-    background-color: #020617;
     border: none;
     border-radius: 20px;
+    background-color: transparent;
 }
 input::placeholder {
     padding-left: 1rem;
@@ -43,6 +42,7 @@ input::placeholder {
 form {
     border: 2px solid #4061db;
     border-radius: 15px;
+    background-color: #020617;
 }
 button {
     margin-right: 0.3rem;
@@ -51,17 +51,26 @@ button {
     border-radius: 12px;
     color: white;
     background-color: #4061db;
-    
 }
 
 
 
-
-
-
-
-
-
-@media screen and (min-width: 720px) {
-
+@media screen and (max-width: 730px) {
+    .container {
+        text-align: center;
+    }
+    form {
+        margin: 0rem 2rem 0rem 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    button {
+        padding: 1.2rem 2rem 1.2rem 2rem;
+    }
+    input {
+        padding: 1.5rem 1rem 1.5rem 1rem;
+        /* margin: 0 -0.2rem 0 -9rem; */
+    }
   }
