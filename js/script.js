@@ -48,3 +48,11 @@ async function fetchFile (url) {
 }
 
 download.addEventListener("click", handleDownload);
+
+shareClick=()=> {
+    const inputValue = qrInput.value;
+    navigator.clipboard.writeText(inputValue);
+    alert("Copied the text:" + inputValue);
+}
+
+share.addEventListener("click", shareClick);

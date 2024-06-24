@@ -76,7 +76,6 @@ img#qr-code {
 }
 .qr {
     background-color: white;
-    border: 1px solid red;
     padding: 2rem 2rem;
     margin-top: 10rem;
     position: absolute;
