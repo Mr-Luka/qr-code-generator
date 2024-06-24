@@ -5,6 +5,7 @@ const container = document.querySelector(".container");
 const container2 = document.querySelector(".second-page");
 const download = document.querySelector("[data-download]");
 const share = document.querySelector("#share");
+const shake = document.querySelector(".shake");
 console.log(download)
 
 
@@ -25,10 +26,21 @@ handleClick = (e) => {
 
 qrButton.addEventListener("click", handleClick);
 
+const startOver = () => {
+    qrImg.classList.add("shake");
+    qrImg.classList.remove("shake");
+}
+const shakee = () => {
+    qrImg.classList.add("shake");
+    qrImg.addEventListener("animationed", shaking= ()=> {
+    qrImg.classList.remove("shake");}, {once: true})
+    setTimeout(startOver, 2000);
+}
 
 handleDownload = async (e) => {
     e.preventDefault();
     await fetchFile(qrImg.src);
+    shakee();
 }
 async function fetchFile (url) {
     try {
@@ -53,6 +65,9 @@ shareClick=()=> {
     const inputValue = qrInput.value;
     navigator.clipboard.writeText(inputValue);
     alert("Copied the text:" + inputValue);
+    shakee();
+    
+
 }
 
 share.addEventListener("click", shareClick);
