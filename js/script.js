@@ -31,6 +31,7 @@ handleDownload = async (e) => {
     await fetchFile(qrImg.src);
 }
 async function fetchFile (url) {
+    try {
     const response = await fetch(url);
     const blob = await response.blob();
     const urlObject = URL.createObjectURL(blob);
@@ -38,7 +39,12 @@ async function fetchFile (url) {
     a.href = urlObject;
     a.download = 'qr-code.png';
     document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
     URL.revokeObjectURL(urlObject);
+    } catch(error) {
+        console.error("Error downloading file", error);
+    }
 }
 
 download.addEventListener("click", handleDownload);
